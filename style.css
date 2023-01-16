@@ -1,0 +1,91 @@
+* {
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  justify-content: center;
+  width: 460px;
+  height: 460px;
+}
+
+.gridlines-on {
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-self: flex-start;
+  margin-right: 20px;
+  padding: 20px 0px;
+}
+
+button {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #3882f6;
+  background-color: white;
+  padding: 9px 50px;
+  border-radius: 5px;
+  transition: all 0.5s;
+  font-size: 15px;
+  margin-bottom: 40px;
+}
+
+.toggled, button:hover {
+  background-color: #3882f6;
+  color: white;
+}
+
+/* TODO: think of some bg color*/
+body {
+  background-color: white;
+}
+
+#color-picker {
+  display: none;
+}
+
+@keyframes move {
+  to {
+    background-position: 4500vh;
+  }
+}
+
+h1 {
+  margin-left: 200px;
+  font-size: 60px;
+  font-weight: bolder;
+  background-image: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: move 95s linear infinite;
+}
